@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Partidos - Estudiantes de La Plata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="title-section">
+            <h1 class="title">Próximos Partidos de Estudiantes de La Plata</h1>
+            <img src="Fotos/estudiantes1.png" alt="León de Estudiantes" class="title-image">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="leyendas.html">Leyendas del Club</a>
+        </nav>
+    </header>
+
+    <section class="partidos-container">
+       
+        <div class="partido">
+            <img src="Fotos/estudiantes1.png" alt="Estudiantes" class="partido-image">
+            <span class="versus">vs</span>
+            <img src="Fotos/rosario.png" alt="Rosario Central" class="partido-image">
+            <div class="partido-info">
+                <h2>Estudiantes vs. Rosario Central</h2>
+                <p>Fecha: 20 de noviembre, 2024 - Hora: 19:15 - Estadio: Estadio Jorge Luis Hirschi</p>
+            </div>
+        </div>
+
+      
+        <div class="partido">
+            <img src="Fotos/estudiantes1.png" alt="Estudiantes" class="partido-image">
+            <span class="versus">vs</span>
+            <img src="Fotos/racing.png" alt="Racing Cluub" class="partido-image">
+            <div class="partido-info">
+                <h2>Estudiantes vs. Racing Club</h2>
+                <p>Fecha: 04 de noviembre, 2024 - Hora: 19:00 - Estadio: Estadio Presidente Perón</p>
+            </div>
+        </div>
+
+       
+        <div class="partido">
+            <img src="Fotos/estudiantes1.png" alt="Estudiantes" class="partido-image">
+            <span class="versus">vs</span>
+            <img src="Fotos/river1.png" alt="River Plate" class="partido-image">
+            <div class="partido-info">
+                <h2>Estudiantes vs. River Plate</h2>
+                <p>Fecha: 29 de noviembre, 2024 - Hora: 21:00 - Estadio: Estadio Jorgue Luis Hirschi</p>
+            </div>
+        </div>
+
+       
+        <div class="partido">
+            <img src="Fotos/estudiantes1.png" alt="Estudiantes" class="partido-image">
+            <span class="versus">vs</span>
+            <img src="Fotos/belgrano.png" alt="Belgrano" class="partido-image">
+            <div class="partido-info">
+                <h2>Estudiantes vs. Belgrano</h2>
+                <p>Fecha: 08 de Diciembre, 2024 - Hora: A  conf. - Estadio: Estadio Julio César Villagra</p>
+            </div>
+        </div>
+
+        
+        <div class="partido">
+            <img src="Fotos/estudiantes1.png" alt="Estudiantes" class="partido-image">
+            <span class="versus">vs</span>
+            <img src="Fotos/argentinosjuniors.png" alt="Argentiinos Juniors" class="partido-image">
+            <div class="partido-info">
+                <h2>Estudiantes vs. Argentinos Juniors</h2>
+                <p>Fecha: 15 de diciembre, 2024 - Hora: A conf. - Estadio: Estadio Jorgue Luis Hirschi</p>
+            </div>
+        </div>
+    </section>
+
+<button id="hinchada-control">Activar Hinchada</button>
+
+
+<audio id="hinchada-audio" loop>
+    <source src="AudioHinchada1.MP3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<script>
+    const hinchadaAudio = document.getElementById("hinchada-audio");
+    const hinchadaControlButton = document.getElementById("hinchada-control");
+
+    hinchadaControlButton.addEventListener("click", function () {
+        if (hinchadaAudio.paused) {
+            hinchadaAudio.play();
+            hinchadaControlButton.textContent = "Desactivar Hinchada";
+        } else {
+            hinchadaAudio.pause();
+            hinchadaControlButton.textContent = "Activar Hinchada";
+        }
+    });
+</script>
+
+
+</body>
+</html>

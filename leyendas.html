@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas de Estudiantes de La Plata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="top-bar">
+        <div class="title-section">
+            <h1 class="title">Leyendas de Estudiantes de La Plata</h1>
+            <img src="Fotos/estudiantes1.png" alt="León de Estudiantes" class="title-image">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="proximos.partidos.html">Próximos Partidos</a>
+        </nav>
+    </header>
+
+   
+    <section class="leyendas-container">
+       
+        <div class="leyenda">
+            <img src="Foto/Veron.png" alt="Juan Sebastián Verón" class="leyenda-image">
+            <div class="leyenda-info">
+                <h2>Juan Sebastián Verón</h2>
+                <p>Conocido como "La Brujita" e hijo de Juan Ramón, es uno de los futbolistas argentinos más destacados de su generación. Tras una exitosa carrera en Europa, jugando en equipos como Lazio, Inter y Manchester United, regresó a Estudiantes de La Plata, donde lideró al equipo hacia la victoria en la Copa Libertadores de 2009. Su visión de juego, liderazgo y compromiso con el club lo convirtieron en un símbolo de Estudiantes y en uno de los jugadores más admirados en Argentina.</p>
+                <button class="audio-control" onclick="toggleAudio('audio-veron')">Activar Audio</button>
+                <audio id="audio-veron">
+                    <source src="Audio/AudioVeron1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+      
+        <div class="leyenda">
+            <img src="Foto/Verondad.png" alt="Juan Ramón Verón" class="leyenda-image">
+            <div class="leyenda-info">
+                <h2>Juan Ramón Verón</h2>
+                <p>Apodado "La Bruja", es una leyenda de Estudiantes de La Plata y uno de los grandes ídolos del club. Formó parte del equipo que ganó tres Copas Libertadores consecutivas (1968, 1969 y 1970) y la Copa Intercontinental en 1968, en la que marcó un gol clave contra el Manchester United. Reconocido por su habilidad, potencia y capacidad goleadora, dejó una huella profunda en el fútbol argentino y es recordado como uno de los grandes íconos de Estudiantes.</p>
+                <button class="audio-control" onclick="toggleAudio('audio-verondad')">Activar Audio</button>
+                <audio id="audio-verondad">
+                    <source src="Audio/AudioVerondad1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        
+        <div class="leyenda">
+            <img src="Foto/Bilardo.png" alt="Carlos Bilardo" class="leyenda-image">
+            <div class="leyenda-info">
+                <h2>Carlos Salvador Bilardo</h2>
+                <p>Carlos Salvador Bilardo, surgido de Estudiantes de La Plata, fue parte del histórico equipo que ganó tres Copas Libertadores consecutivas (1968, 1969 y 1970) y la Copa Intercontinental en 1968. Como entrenador, llevó a Argentina a ganar el Mundial de 1986 en México, consolidándose como un estratega obsesivo y pionero del "bilardismo", un estilo de juego enfocado en la táctica y el pragmatismo. Su rivalidad ideológica con César Luis Menotti marcó una era en el fútbol argentino.</p>
+                <button class="audio-control" onclick="toggleAudio('audio-bilardo')">Activar Audio</button>
+                <audio id="audio-bilardo">
+                    <source src="Audio/AudioBilardo1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+  
+    <script>
+        function pauseAllAudios(exceptId) {
+            const audios = document.querySelectorAll("audio");
+            audios.forEach(audio => {
+                if (audio.id !== exceptId) {
+                    audio.pause();
+                    audio.previousElementSibling.textContent = "Activar Audio";
+                }
+            });
+        }
+
+        function toggleAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            const button = audioElement.previousElementSibling;
+
+            pauseAllAudios(audioId);
+
+            if (audioElement.paused) {
+                audioElement.play();
+                button.textContent = "Desactivar Audio";
+            } else {
+                audioElement.pause();
+                button.textContent = "Activar Audio";
+            }
+        }
+    </script>
+</body>
+</html>

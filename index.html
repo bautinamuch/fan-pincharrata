@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanpage Estudiantes de La Plata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="top-bar">
+        <div class="title-section">
+            <h1 class="title">Estudiantes de La Plata</h1>
+            <img src="Fotos/estudiantes1.png" alt="León de Estudiantes" class="title-image">
+        </div>
+        <nav class="nav-links">
+            <a href="leyendas.html">Leyendas del Club</a>
+            <a href="proximos.partidos.html">Próximos Partidos</a>
+        </nav>
+    </header>
+
+    
+    <div class="background-video">
+        <video id="background-video" autoplay loop muted>
+            <source src="Video/Historiaestudiantes.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay">
+        <div class="welcome-box">
+            <p>Bienvenidos a la fanpage del Pincharrata. Un espacio digital para revivir la historia, las leyendas y la pasión por nuestro club.</p>
+        </div>
+    </div>
+    
+   
+    <button id="audio-control">Activar Audio</button>
+    <audio id="background-audio" loop>
+        <source src="Audio/AudioPincha123.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
